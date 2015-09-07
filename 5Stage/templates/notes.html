@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+ 
+  <meta name="viewport" content="user-scalable=0, initial-scale=1.0, width=device-width">
+
+  <title>What I learned on Stage 5</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+
+</head>
+<body>
+    <div class="concept">
+      <div class="concept-title">
+         IOS
+      </div>
+        <div class="concept-description"><p>
+        iOS (originally iPhone OS) is a mobile operating system for Apple hardware.The user interface of iOS is based on the concept of direct manipulation, using multi-touch gestures. Interface control elements consist of sliders, switches, and buttons. iOS shares with OS X some frameworks such as Core Foundation and Foundation; however, its UI toolkit is Cocoa Touch rather than OS X's Cocoa, so that it provides the UIKit framework rather than the AppKit framework. The latest version IOS9 SDK includes new APIs and services offering multitasking, gaming and support for other applications. 
+		<a href="https://developer.apple.com/ios/pre-release/">IOS 9</a>
+		
+</p>
+        </div>
+    </div>
+    <div class="concept">
+      <div class="concept-title">
+      XCODE
+      </div>
+        <div class="concept-description"><p>
+    Software Development kit that allows developers to make applications for the iPhone and iPod Touch, as well as test them in an "iPhone simulator". Use together with Swift to create software programs called apps that can be installed into Iphone and other Apple products. Xcode is an integrated development environment (IDE) containing a suite of software development tools developed by Apple for developing software for OS X and iOS. Xcode also includes Apple's WebObjects tools and frameworks for building Java web applications and web services. The Xcode suite also includes most of Apple's developer documentation, and built-in Interface Builder, an application used to construct graphical user interfaces. This is different from most programming environment because of the graphical user capability which takes awhile to get accustomed to. Besides the simulator, it also has the playground where snippets of code can be tested before running the actual program, displaying the result along with the program code. 
+	
+	<a href="https://developer.apple.com/support/xcode/"> XCODE reference</a>
+	
+</p>
+        </div>
+    </div>
+  <div class="concept">
+      <div class="concept-title">
+      Swift
+      </div>
+        <div class="concept-description"><p>
+	   Swift is a new programming language for iOS, OS X, and watchOS apps that builds on the best of C and Objective-C, without the constraints of C compatibility. Like C, Swift uses variables to store and refer to values by an identifying name. Swift also makes extensive use of variables whose values cannot be changed known as constants.Swift also introduces optional types, which handle the absence of a value. This available through us of "let" instead of "var" declarations.In Swift, errors are represented by values of types that conform to the ErrorType protocol. It has autocomplete feature which provides suggestions for parameters to commands. 
+	   <a href="https://developer.apple.com/swift/"> Swift reference</a>
+</p>
+        </div>
+    </div> 
+<div class="concept">
+      <div class="concept-title">
+      Next steps
+      </div>
+        <div class="concept-description"><p>
+	  This nanodegree taught me how to pull documentation, reference, use other programmers' code and solicit support to create programs in different languages. The reference below will serve well for future studies.
+	   <a href="https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md">Reference for all Programming languages</a>
+</p>
+        </div>
+    </div> 		
+
+</body>
+  <div class="comment">
+     <br>
+     {% for comment in comments -%}
+         {% if comment.author %}
+           <b>{{ comment.author.email }}
+             {% if user == comment.author.identity %}
+               (You = )  
+             {% endif %}
+           </b> wrote:
+         {% else %}
+           (Anonymous)  
+         {% endif %}
+    </div>
+<div class = "concept">
+ <div class = "concept-title">
+      <div>          
+          {{ comment.title }}        
+      </div>
+     </div>
+  <div class="concept-description"><p>
+      
+      {{ comment.description }} </p>
+  </div>
+  </diV>
+
+   {% endfor %}
+        <form action="/?" method="post">
+        <b> Title </b>
+         <div><textarea name="title" rows="1" cols="60"></textarea>
+         </div>
+         <b> Description </b>
+             <div><textarea name="description" rows="2" cols="100"></textarea>
+             </div>
+         <div><input type="submit" value="Add Concept"></div>
+       </form>
+       <a href= {{ url|safe }} > {{ url_linktext }} </a>
+       </div>
+	   <br><br> 
+	   <br><br>
+	  
+   </div>
+   </body>
+   </html>

@@ -1,0 +1,64 @@
+/* This is a CSS comment */ 
+
+ 
+*{   
+   
+    box-sizing: border-box;
+} 
+
+body {
+  padding: 10px 10px;
+  font-family: Sans-serif;
+  max-width: 100%;
+  margin: 0  auto; 
+  
+  /* for top and bottom margins, auto for auto adjust. Use this style for the main body.  */
+}
+
+ 
+.concept-chapter {
+
+display: flex; 
+  flex-flow: row wrap;
+    background-color: #6E9D6E;
+	border-radius: 10px;
+	height: 10px;
+	padding: 10px;
+	margin: 10px auto;
+}
+
+
+.concept {    
+
+/*   Use flex display to display vertical  */
+
+  display: flex; 
+  flex-flow: row wrap;
+  justify-content: flex-start;
+ 
+/* Settings below for background and borders. */
+	background-color: teal;
+	border-radius: 10px;
+	color: white;
+	padding: 10px;
+	margin: 10px auto;
+}
+
+.concept-title { 
+
+		font-size: 75%;
+		color: #F60; 
+		font-weight: bold;
+}
+
+/* title reduced from 150 to 100. color #F60 
+description reduced from 100 to 80 color white #*/
+ .concept-description { 
+
+		font-size: 75%;
+		color: white;
+		
+		
+}
+
+
